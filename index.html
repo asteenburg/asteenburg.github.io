@@ -27,9 +27,32 @@
 </head>
 
 <body class="text-slate-900 bg-white">
+
   <!-- Hero Section -->
   <section class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_2038.jpg')">
+    <!-- Navbar -->
+    <div class="navbar bg-transparent text-white p-4 flex justify-between items-center">
+      <div class="text-lg font-bold">MySite</div>
+
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="block md:hidden focus:outline-none">
+        <!-- Icon lines -->
+        <div class="w-6 h-1 bg-white mb-1"></div>
+        <div class="w-6 h-1 bg-white mb-1"></div>
+        <div class="w-6 h-1 bg-white"></div>
+      </button>
+
+      <!-- Menu Links -->
+      <div id="mobile-menu"
+        class="hidden absolute top-16 left-0 w-full bg-gray-800 flex flex-col items-center space-y-4 py-4 md:hidden">
+        <a href="#about" class="hover:text-gray-300">About</a>
+        <a href="#experience" class="hover:text-gray-300">Experience</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </div>
+    </div>
     <div class="absolute inset-0 bg-black bg-opacity-60 flex px-4">
+
+
       <div class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-left items-start pt-24">
         <div class="hidden md:block md:col-span-1"></div>
         <div class="col-span-12 md:col-span-10 flex flex-col items-start justify-start space-y-4 text-left">
@@ -152,6 +175,7 @@
         <ul class="space-y-1">
           <li><a href="#top" class="hover:underline">Back to Top</a></li>
           <li><a href="#about" class="hover:underline">Learn More</a></li>
+          <li><a href="#" class="hover:underline">My Other Pages</a></li>
         </ul>
       </div>
       <div>
@@ -164,6 +188,15 @@
       &copy; 2025 Adam Steenburg. All rights reserved.
     </div>
   </footer>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
 </body>
 
 </html>
