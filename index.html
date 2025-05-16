@@ -31,24 +31,32 @@
   <!-- Hero Section -->
   <section class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_2038.jpg')">
     <!-- Navbar -->
-    <nav class="bg-white shadow px-4 py-3 flex justify-between items-center">
+    <nav class="bg-transparent px-4 py-3 flex justify-between items-center">
       <div class="text-xl font-bold"></div>
 
       <!-- Hamburger button -->
       <button id="menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
 
-      <!-- Menu links -->
-      <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
-        <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
-        <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
-        <a href="#" class="text-gray-700 hover:text-blue-500">Contact</a>
+      <!-- Desktop menu -->
+      <div class="hidden md:flex flex-row items-center space-x-6 text-white">
+        <a href="#" class="hover:text-blue-300">Home</a>
+        <a href="#about" class="hover:text-blue-300">About</a>
+        <a href="#contact" class="hover:text-blue-300">Contact</a>
       </div>
     </nav>
+
+    <!-- Mobile menu -->
+    <div id="menu" class="hidden flex-col items-start px-4 space-y-2 md:hidden bg-black bg-opacity-80 text-white pb-4">
+      <a href="#" class="hover:text-blue-300">Home</a>
+      <a href="#about" class="hover:text-blue-300">About</a>
+      <a href="#contact" class="hover:text-blue-300">Contact</a>
+    </div>
+
     <div class="absolute inset-0 bg-black bg-opacity-60 flex px-4">
 
 
