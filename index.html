@@ -28,38 +28,12 @@
 
 <body class="text-slate-900 bg-white">
   <!-- Navbar -->
-  <nav class="absolute top-0 right-0 z-40 bg-transparent px-12 py-3 flex justify-between items-center">
-    <div class="text-xl font-bold"></div>
-
-    <!-- Hamburger button -->
-    <button id="menu-btn" class="md:hidden focus:outline-none">
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-
-    <!-- Desktop menu -->
-    <div class="hidden md:flex flex-row items-center space-x-6 text-white">
-      <a href="#" class="hover:text-blue-300">Home</a>
-      <a href="#about" class="hover:text-blue-300">About</a>
-      <a href="#contact" class="hover:text-blue-300">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div id="menu" class="hidden flex-col items-start px-4 space-y-2 md:hidden bg-black bg-opacity-80 text-white pb-4">
-    <a href="#" class="hover:text-blue-300">Home</a>
-    <a href="#about" class="hover:text-blue-300">About</a>
-    <a href="#contact" class="hover:text-blue-300">Contact</a>
-  </div>
+  <div id="navbar-placeholder"></div>
 
   <!-- Hero Section -->
   <section class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_2038.jpg')">
 
-
     <div class="absolute inset-0 bg-black bg-opacity-60 flex px-4">
-
 
       <div class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-left items-start pt-24">
         <div class="hidden md:block md:col-span-1"></div>
@@ -254,14 +228,27 @@
     }
   </script>
 
+  <!-- JS to Load Navbar and Footer -->
   <script>
-    const footerPlaceholder = document.getElementById('footer-placeholder');
-    if (footerPlaceholder) {
-      fetch('./footer.html')
-        .then(response => response.text())
-        .then(data => footerPlaceholder.innerHTML = data)
-        .catch(err => console.error('Error loading footer:', err));
-    }
+    const loadHTML = (id, file) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      fetch(file)
+        .then(res => res.text())
+        .then(html => el.innerHTML = html)
+        .catch(err => console.error(`Error loading ${file}:`, err));
+    };
+
+    loadHTML('navbar-placeholder', './navbar.html');
+    loadHTML('footer-placeholder', './footer.html');
+
+    // Mobile menu toggle
+    document.addEventListener('click', e => {
+      if (e.target.closest('#menu-btn')) {
+        const menu = document.querySelector('#menu');
+        if (menu) menu.classList.toggle('hidden');
+      }
+    });
   </script>
 
 
