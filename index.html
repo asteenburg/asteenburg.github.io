@@ -75,7 +75,7 @@
             journey — combining hands-on service with hands-on skills.
           </p>
           <a href="#about"
-            class="inline-block mt-4 px-6 py-3 bg-amber-500 text-white font-semibold rounded hover:bg-amber-600 transition">
+            class="inline-block mt-4 px-6 py-3 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition">
             Learn More
           </a>
 
@@ -91,6 +91,13 @@
       <div>
         <div class="max-w-3xl">
           <h2 class="text-2xl sm:text-3xl font-bold mb-4" id="about">About Me</h2>
+          <p class="text-sm text-gray-900 leading-relaxed">Dedicated public safety professional with over 15 years of
+            combined experience in law enforcement, emergency response,
+            and regulatory compliance. Proven ability to enforce laws and regulations, resolve conflicts through
+            de-escalation, and
+            provide strong leadership in high-pressure situations. Skilled in incident command, report writing, and
+            community
+            engagement, with a consistent record of upholding integrity, accountability, and public trust.</p>
           <p class="text-sm text-gray-900 leading-relaxed">
             I’m a dedicated firefighter with a deep passion for serving my community and protecting what matters most.
             Off the front lines, I’ve developed a growing interest in web design — a creative outlet where I can build,
@@ -185,7 +192,7 @@
   <section class="relative h-[50vh] w-full bg-cover bg-center" style="background-image: url('./images/Red3.jpg')">
     <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
       <h2 class="text-4xl sm:text-5xl font-bold text-white text-center px-4">
-        Professional Profile
+        Profes<span class="text-red-500">sional</span> Profile
       </h2>
     </div>
   </section>
@@ -224,36 +231,9 @@
     </div>
   </section>
 
-
-
   <!-- footer -->
-  <footer class="bg-slate-200 text-slate-700 mt-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-      <div>
-        <h3 class="font-semibold text-slate-900 mb-2">About This Site</h3>
-        <p class="leading-relaxed">
-          Built by a firefighter with a passion for web design. This site is a reflection of my journey—balancing
-          service, family, and creativity.
-        </p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-slate-900 mb-2">Quick Links</h3>
-        <ul class="space-y-1">
-          <li><a href="#top" class="hover:underline">Back to Top</a></li>
-          <li><a href="#about" class="hover:underline">Learn More</a></li>
-          <li><a href="#" class="hover:underline">My Other Pages</a></li>
-        </ul>
-      </div>
-      <div id="contact">
-        <h3 class="font-semibold text-slate-900 mb-2">Contact</h3>
-        <p>Email: <a href="mailto:example@example.com" class="hover:underline">asteenburg@live.ca</a></p>
-        <p class="mt-1">Location: Ontario, Canada</p>
-      </div>
-    </div>
-    <div class="text-center text-xs text-slate-500 py-4 border-t border-slate-300">
-      &copy; 2025 Adam Steenburg. All rights reserved.
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+
   <script>
     console.log('Script loaded.');
   </script>
@@ -269,6 +249,15 @@
     }
   </script>
 
+  <script>
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+      fetch('./footer.html')
+        .then(response => response.text())
+        .then(data => footerPlaceholder.innerHTML = data)
+        .catch(err => console.error('Error loading footer:', err));
+    }
+  </script>
 
 
 </body>
