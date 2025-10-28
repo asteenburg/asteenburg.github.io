@@ -208,28 +208,32 @@
 
   <!-- Scripts -->
   <script>
-    const loadHTML = (id, file) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      fetch(file)
-        .then(res => res.text())
-        .then(html => {
-          el.innerHTML = html;
+    const loadHTML = (id, file, callback) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  fetch(file)
+    .then(res => res.text())
+    .then(html => {
+      el.innerHTML = html;
+      if (callback) callback(); // run callback after content is loaded
+    })
+    .catch(err => console.error(`Error loading ${file}:`, err));
+};
 
-          // Hamburger menu now works after navbar loads
-          const menuBtn = document.getElementById('menu-btn');
-          const menu = document.getElementById('menu');
-          if (menuBtn && menu) {
-            menuBtn.addEventListener('click', () => {
-              menu.classList.toggle('hidden');
-            });
-          }
-        })
-        .catch(err => console.error(`Error loading ${file}:`, err));
-    };
+// Attach hamburger menu after navbar loads
+const initHamburgerMenu = () => {
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+};
 
-    loadHTML('navbar-placeholder', './navbar.html');
-    loadHTML('footer-placeholder', './footer.html');
+// Load navbar and footer
+loadHTML('navbar-placeholder', './navbar.html', initHamburgerMenu);
+loadHTML('footer-placeholder', './footer.html');
   </script>
 </body>
 
