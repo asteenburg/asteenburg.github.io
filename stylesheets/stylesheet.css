@@ -31,3 +31,15 @@ html {
 a:link {
   text-decoration: none;
 }
+
+/* CSS for sliding effect */
+.slide-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.slide-left.active {
+  transform: translateX(0);
+  opacity: 1;
+}
