@@ -51,3 +51,6 @@ a:link {
   opacity: 1 !important;
   transform: translateX(0) !important;
 }
+#quote-section {
+  opacity: 1 !important;
+}
