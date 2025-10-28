@@ -33,6 +33,7 @@ a:link {
 }
 
 /* CSS for sliding effect */
+/* Sliding left effect */
 .slide-left {
   transform: translateX(-100%);
   opacity: 0;
