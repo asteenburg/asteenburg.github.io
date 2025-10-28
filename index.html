@@ -238,20 +238,18 @@ const initHamburgerMenu = () => {
 loadHTML('navbar-placeholder', './navbar.html', initHamburgerMenu);
 loadHTML('footer-placeholder', './footer.html');
   </script>
-  <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const quoteSection = document.getElementById("quote-section");
+  const slideContent = document.querySelector("#quote-section .slide-content");
 
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        quoteSection.classList.add("slide-content-active");
-        observer.disconnect(); // ✅ Only run once
-      }
-    }, { threshold: 0.2 });
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      slideContent.classList.add("slide-content-active");
+      observer.disconnect(); // Only run once
+    }
+  }, { threshold: 0.2 });
 
-    observer.observe(quoteSection);
-  });
-</script>
+  observer.observe(slideContent);
+});
 </body>
 
 </html>
