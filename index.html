@@ -117,13 +117,9 @@
   <!-- Quote Section -->
   <section class="relative h-screen w-full bg-cover bg-center slide-wrapper" style="background-image: url('./images/IMG_1953.jpg')">
   <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-4">
-    <div class="slide-content grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-center md:text-left">
-      <div class="hidden md:block md:col-span-1"></div>
-      <div class="col-span-12 md:col-span-10 flex flex-col items-center md:items-start justify-center space-y-4">
-        <p class="text-xl sm:text-2xl">“More often than not, a hero’s most epic battle is the one you never see; it’s the battle that goes on within him or herself.”</p>
-        <p>– Kevin Smith, Actor.</p>
-      </div>
-      <div class="hidden md:block md:col-span-1"></div>
+    <div class="slide-content max-w-6xl text-white text-center">
+      <p class="text-xl sm:text-2xl">“More often than not, a hero’s most epic battle is the one you never see; it’s the battle that goes on within him or herself.”</p>
+      <p>– Kevin Smith, Actor.</p>
     </div>
   </div>
 </section>
@@ -235,21 +231,21 @@ loadHTML('navbar-placeholder', './navbar.html', initHamburgerMenu);
 loadHTML('footer-placeholder', './footer.html');
   </script>
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const slideEl = document.querySelector('.slide-content');
+document.addEventListener('DOMContentLoaded', () => {
+  const slideEl = document.querySelector('.slide-content');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          slideEl.classList.add('active'); // slide in when in viewport
-        } else {
-          slideEl.classList.remove('active'); // slide out when out of viewport
-        }
-      });
-    }, { threshold: 0.1 });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        slideEl.classList.add('active'); // slide in
+      } else {
+        slideEl.classList.remove('active'); // slide out
+      }
+    });
+  }, { threshold: 0.2 }); // triggers when 20% of element is visible
 
-    observer.observe(slideEl);
-  });
+  observer.observe(slideEl);
+});
 </script>
 </body>
 
