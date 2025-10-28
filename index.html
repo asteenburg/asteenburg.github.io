@@ -9,7 +9,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind config -->
+  <!-- Tailwind config for custom colors/fonts -->
   <script>
     tailwind.config = {
       theme: {
@@ -42,7 +42,8 @@
             I bring the same dedication to learning web design as I do to protecting my community. This site is my
             journey — combining hands-on service with hands-on skills.
           </p>
-          <a href="#about" class="inline-block mt-4 px-6 py-3 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition">
+          <a href="#about"
+            class="inline-block mt-4 px-6 py-3 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition">
             Learn More
           </a>
         </div>
@@ -207,22 +208,26 @@
 
   <!-- Scripts -->
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    if (menuBtn && menu) {
-      menuBtn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    }
-
     const loadHTML = (id, file) => {
       const el = document.getElementById(id);
       if (!el) return;
       fetch(file)
         .then(res => res.text())
-        .then(html => el.innerHTML = html)
+        .then(html => {
+          el.innerHTML = html;
+
+          // Hamburger menu now works after navbar loads
+          const menuBtn = document.getElementById('menu-btn');
+          const menu = document.getElementById('menu');
+          if (menuBtn && menu) {
+            menuBtn.addEventListener('click', () => {
+              menu.classList.toggle('hidden');
+            });
+          }
+        })
         .catch(err => console.error(`Error loading ${file}:`, err));
     };
+
     loadHTML('navbar-placeholder', './navbar.html');
     loadHTML('footer-placeholder', './footer.html');
   </script>
