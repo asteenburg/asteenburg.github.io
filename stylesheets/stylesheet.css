@@ -37,14 +37,11 @@ a:link {
   overflow: hidden;
 }
 
-/* Slide effect */
-.slide-left {
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
+.slide-container {
+  overflow: hidden;
 }
 
-.slide-left.active {
+.slide-content.active {
   transform: translateX(0);
   opacity: 1;
 }
