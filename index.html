@@ -236,24 +236,21 @@ loadHTML('navbar-placeholder', './navbar.html', initHamburgerMenu);
 loadHTML('footer-placeholder', './footer.html');
   </script>
   <script>
-  // Select the element
-  const quote = document.querySelector('.slide-left');
+  const slideElement = document.querySelector('.slide-left');
 
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll) {
-      // Scrolling down -> add active to slide in
-      quote.classList.add('active');
-    } else {
-      // Scrolling up -> remove active to slide out
-      quote.classList.remove('active');
-    }
-
-    lastScroll = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        slideElement.classList.add('active'); // Slide in
+      } else {
+        slideElement.classList.remove('active'); // Slide out
+      }
+    });
+  }, {
+    threshold: 0.1 // Trigger when 10% of element is visible
   });
+
+  observer.observe(slideElement);
 </script>
 </body>
 
