@@ -37,11 +37,15 @@ a:link {
   overflow: hidden;
 }
 
-.slide-container {
-  overflow: hidden;
+/* Slide content initial state */
+.slide-content {
+  transform: translateX(-100%); /* start off-screen to the left */
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
+/* Slide content active state */
 .slide-content.active {
-  transform: translateX(0);
+  transform: translateX(0); /* slide into view */
   opacity: 1;
 }
