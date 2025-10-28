@@ -32,12 +32,12 @@ a:link {
   text-decoration: none;
 }
 
-/* wrapper hides overflow so slide appears from outside */
+/* Slide wrapper hides overflow so content can come in from left */
 .slide-wrapper {
   overflow: hidden;
 }
 
-/* initial off-screen state */
+/* Initial state: off-screen left */
 .slide-content {
   transform: translateX(-120vw); /* fully off-screen left */
   opacity: 0;
@@ -45,12 +45,9 @@ a:link {
   will-change: transform, opacity;
 }
 
-/* visible state */
-
+/* Visible state */
 .slide-content-active {
-  opacity: 1 !important;
   transform: translateX(0) !important;
-}
-#quote-section {
   opacity: 1 !important;
 }
+
