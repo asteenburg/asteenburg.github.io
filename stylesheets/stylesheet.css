@@ -32,12 +32,16 @@ a:link {
   text-decoration: none;
 }
 
-/* CSS for sliding effect */
-/* Sliding left effect */
+/* Wrapper hides overflow */
+.slide-wrapper {
+  overflow: hidden;
+}
+
+/* Slide effect */
 .slide-left {
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 .slide-left.active {
