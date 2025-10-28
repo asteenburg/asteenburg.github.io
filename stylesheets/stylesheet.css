@@ -32,20 +32,20 @@ a:link {
   text-decoration: none;
 }
 
-/* Wrapper hides overflow */
+/* Hide overflow on parent */
 .slide-wrapper {
   overflow: hidden;
 }
 
 /* Slide content initial state */
 .slide-content {
-  transform: translateX(-100%); /* start off-screen to the left */
+  transform: translateX(-100vw); /* start completely offscreen to the left */
   opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-/* Slide content active state */
+/* Active state */
 .slide-content.active {
-  transform: translateX(0); /* slide into view */
+  transform: translateX(0); /* slide in */
   opacity: 1;
 }
