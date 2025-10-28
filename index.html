@@ -9,7 +9,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind config for custom colors/fonts -->
+  <!-- Optional: Tailwind config for custom colors/fonts -->
   <script>
     tailwind.config = {
       theme: {
@@ -23,7 +23,7 @@
   </script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="./stylesheets/stylesheet.css" />
+  <link rel="Stylesheet" href="./css/stylesheet.css" />
 </head>
 
 <body class="text-slate-900 bg-white">
@@ -32,12 +32,18 @@
 
   <!-- Hero Section -->
   <section class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_2038.jpg')">
+
     <div class="absolute inset-0 bg-black bg-opacity-60 flex px-4">
+
       <div class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-left items-start pt-24">
         <div class="hidden md:block md:col-span-1"></div>
         <div class="col-span-12 md:col-span-10 flex flex-col items-start justify-start space-y-4 text-left">
-          <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase">Adam Steenburg</h1>
-          <p class="text-lg sm:text-xl md:text-2xl uppercase">Firefighter, Aspiring Web Designer</p>
+          <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase">
+            Adam Steenburg
+          </h1>
+          <p class="text-lg sm:text-xl md:text-2xl uppercase">
+            Firefighter, Aspiring Web Designer
+          </p>
           <p class="text-sm sm:text-base md:text-lg max-w-2xl">
             I bring the same dedication to learning web design as I do to protecting my community. This site is my
             journey — combining hands-on service with hands-on skills.
@@ -46,26 +52,27 @@
             class="inline-block mt-4 px-6 py-3 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition">
             Learn More
           </a>
+
         </div>
         <div class="hidden md:block md:col-span-1"></div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="w-full h-auto px-4 sm:px-6 lg:px-16 py-8">
+  <!-- about section -->
+  <section class="w-full h-100 px-4 sm:px-6 lg:px-16 py-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <div class="max-w-3xl">
           <h2 class="text-2xl sm:text-3xl font-bold mb-4" id="about">About Me</h2>
+          <p class="text-sm text-gray-900 leading-relaxed">Dedicated public safety professional with over 15 years of
+            combined experience in law enforcement, emergency response,
+            and regulatory compliance. Proven ability to enforce laws and regulations, resolve conflicts through
+            de-escalation, and
+            provide strong leadership in high-pressure situations. Skilled in incident command, report writing, and
+            community
+            engagement, with a consistent record of upholding integrity, accountability, and public trust.</p>
           <p class="text-sm text-gray-900 leading-relaxed">
-            Dedicated public safety professional with over 15 years of combined experience in law enforcement, emergency
-            response, and regulatory compliance. Proven ability to enforce laws and regulations, resolve conflicts
-            through de-escalation, and provide strong leadership in high-pressure situations. Skilled in incident
-            command, report writing, and community engagement, with a consistent record of upholding integrity,
-            accountability, and public trust.
-          </p>
-          <p class="text-sm text-gray-900 leading-relaxed mt-2">
             I’m a dedicated firefighter with a deep passion for serving my community and protecting what matters most.
             Off the front lines, I’ve developed a growing interest in web design — a creative outlet where I can build,
             problem-solve, and keep learning. Whether I’m responding to emergencies or exploring new lines of code, I
@@ -74,7 +81,6 @@
           </p>
         </div>
       </div>
-
       <div>
         <div class="max-w-3xl">
           <h2 class="text-2xl sm:text-3xl font-bold mb-4">Experience</h2>
@@ -90,52 +96,38 @@
           </p>
         </div>
       </div>
-
       <div>
         <div class="max-w-3xl">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4">Certifications & Awards</h2>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-4">Certifications</h2>
           <p class="text-sm text-gray-900 leading-relaxed">
             I hold multiple NFPA certifications, which include:
-          </p>
-          <ul class="text-sm list-disc list-inside mb-4">
-            <li>NFPA 1001 Firefighter — Level II</li>
-            <li>NFPA 1072 Hazardous Materials Operations</li>
-            <li>NFPA 1021 Fire Officer</li>
-            <li>NFPA 1041 Fire Service Instructor — Level II</li>
+          <ul class="text-sm">
+            <li>Firefighter 1001 Level II</li>
+            <li>Hazmat 1072/472</li>
+            <li>Fire Officer 1021</li>
+            <li>Instructor 1041 Level II</li>
           </ul>
-          <p class="text-sm text-gray-900 leading-relaxed">
-            Awards & Recognition:
           </p>
-          <ul class="text-sm list-disc list-inside">
-            <li>Queen Elizabeth II’s Diamond Jubilee Medal — Canada, 2012</li>
-          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quote Section -->
-  <section id="quote-section" class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_1953.jpg')">
-  <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-4">
-    <!-- Slide wrapper -->
-    <div class="slide-wrapper w-full">
-      <div class="slide-content grid grid-cols-1 md:grid-cols-12 max-w-6xl mx-auto text-white text-center md:text-left space-y-4">
+  <!-- quote section -->
+  <section class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_1953.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-4">
+      <div class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-center md:text-left">
         <div class="hidden md:block md:col-span-1"></div>
-
         <div class="col-span-12 md:col-span-10 flex flex-col items-center md:items-start justify-center space-y-4">
-          <p class="text-xl sm:text-2xl">
-            “More often than not, a hero’s most epic battle is the one you never see; it’s the battle that goes on within him or herself.”
-          </p>
+          <p class="text-xl sm:text-2xl">“More often than not, a hero’s most epic battle is the one you never see; it’s
+            the battle that goes on within him or herself.”</p>
           <p>– Kevin Smith, Actor.</p>
         </div>
-
         <div class="hidden md:block md:col-span-1"></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Bio Section -->
   <section class="px-4 sm:px-6 lg:px-16 py-8">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <div class="md:col-span-1">
@@ -145,17 +137,25 @@
       <div class="md:col-span-2">
         <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-center md:text-left">Bio</h2>
         <p class="text-sm text-gray-900 leading-relaxed mb-4">
-          In 2001, right after 9/11, I joined my local volunteer fire department. My father was a firefighter for about
-          20 years, so I thought "now" is a good time to carry the torch. I stayed on serving my community while working
-          full-time installing cable and Internet. That's when I started experimenting with web design, learning HTML
-          and CSS. From there, I progressed to other programming languages like Javascript and Visual Basic. I wasn't a
-          huge fan of Visual Basic, so I stuck with web design.
+          In 2001, right after 9/11, I made the decision to join my local volunteer fire department. My father was a
+          firefighter for about 20 years, so I thought "now" is a good time to carry the torch. I stayed on serving my
+          community while working a fulltime job installing cable and Internet making a mediocre wage - enough to pay
+          rent
+          at least. That's when I started experimenting with web design, learning HTML and CSS. From there I progressed
+          to
+          other programming languages like Javascript and Visual Basic. I wasn't a huge fan of Visual Basic. I guess
+          designing and programming computer programs wasn't my cup of tea so I stuck with web design.
         </p>
         <p class="text-sm text-gray-900 leading-relaxed">
-          After about seven years, I decided I needed more in my life. Something with meaning instead of installing cable
-          and Internet. I joined the Canadian Armed Forces (CAF) for five years and then transitioned to become an
-          aircraft firefighter at a major airport. I have always enjoyed dabbling with code, though I am still
-          learning and improving my skills in web design.
+          After about seven years I decided I needed more in my life. Something with meaning instead of installing cable
+          and Internet. Something just clicked and I knew what I had to do - join the Canadian Armed Forces (CAF). I did
+          that for five years and then it was time for me to stay home. Now, I am a aircraft firefighter at a major
+          airport, but the funny thing is, I have always enjoyed dabbling with code. I will admit, I'm not very good at
+          it
+          and I have a long way to go. When I first started to learn Netscape was the browser of choice and Javascript
+          was
+          super simple. HTML was also very basic, and now there are so many different languages to use for not only
+          building, but styling - CSS, Tailwind CSS, Bootstrap, the list goes on.
         </p>
       </div>
 
@@ -163,7 +163,7 @@
     </div>
   </section>
 
-  <!-- Professional Profile Header -->
+  <!-- Header / Profile Title -->
   <section class="relative h-[50vh] w-full bg-cover bg-center" style="background-image: url('./images/Red3.jpg')">
     <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
       <h2 class="text-4xl sm:text-5xl font-bold text-white text-center px-4">
@@ -172,15 +172,16 @@
     </div>
   </section>
 
-  <!-- Professional Experience -->
+  <!-- Professional Experience Details -->
   <section class="px-4 sm:px-6 lg:px-16 py-12">
     <div class="max-w-4xl mx-auto space-y-12">
+
       <div>
         <h3 class="text-xl sm:text-2xl font-bold">Aircraft Rescue Firefighter</h3>
         <p class="text-sm text-gray-700 mb-3">Hamilton International Airport</p>
         <p class="text-sm text-gray-900 leading-relaxed">
-          Responsible for aircraft emergencies, medical response, and airfield safety. Strong focus on rapid
-          intervention and teamwork in high-pressure situations.
+          Responsible for aircraft emergencies, medical response, and airfield safety.
+          Strong focus on rapid intervention and teamwork in high pressure situations.
         </p>
       </div>
 
@@ -188,8 +189,8 @@
         <h3 class="text-xl sm:text-2xl font-bold">Aircraft Rescue Firefighter</h3>
         <p class="text-sm text-gray-700 mb-3">Region of Waterloo International Airport</p>
         <p class="text-sm text-gray-900 leading-relaxed">
-          Responded to fire and medical incidents on both airside and landside. Supported operations including
-          equipment inspections and emergency preparedness.
+          Responded to fire and medical incidents on both airside and landside.
+          Supported operations including equipment inspections and emergency preparedness.
         </p>
       </div>
 
@@ -197,63 +198,59 @@
         <h3 class="text-xl sm:text-2xl font-bold">Firefighter & Instructor</h3>
         <p class="text-sm text-gray-700 mb-3">County of Brant Fire Department</p>
         <p class="text-sm text-gray-900 leading-relaxed">
-          Provided structural fire response, public education, and team training. Mentored new recruits and
-          contributed to improving firefighter readiness.
+          Provided structural fire response, public education, and team training.
+          Mentored new recruits and contributed to improving firefighter readiness.
         </p>
       </div>
+
     </div>
   </section>
 
-  <!-- Image Section -->
-  <section class="relative h-[50vh] w-full bg-cover bg-center" style="background-image: url('./images/20230406_115808_Original.JPG')">
-    <div class="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center"></div>
+  <section class="relative h-[50vh] w-full bg-cover bg-center"
+    style="background-image: url('./images/20230406_115808_Original.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center">
+    </div>
   </section>
-
-  <!-- Footer -->
+  <!-- footer -->
   <div id="footer-placeholder"></div>
 
-  <!-- Scripts -->
   <script>
-    const loadHTML = (id, file, callback) => {
-  const el = document.getElementById(id);
-  if (!el) return;
-  fetch(file)
-    .then(res => res.text())
-    .then(html => {
-      el.innerHTML = html;
-      if (callback) callback(); // run callback after content is loaded
-    })
-    .catch(err => console.error(`Error loading ${file}:`, err));
-};
-
-// Attach hamburger menu after navbar loads
-const initHamburgerMenu = () => {
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-  if (menuBtn && menu) {
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  }
-};
-
-// Load navbar and footer
-loadHTML('navbar-placeholder', './navbar.html', initHamburgerMenu);
-loadHTML('footer-placeholder', './footer.html');
+    console.log('Script loaded.');
   </script>
+
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const slide = document.querySelector("#quote-section .slide-content");
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      slide.classList.add("slide-content-active");
-      observer.disconnect(); // run only once
+    if (menuBtn && menu) {
+      menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
     }
-  }, { threshold: 0.2 });
+  </script>
 
-  observer.observe(slide);
-});</script>
+  <!-- JS to Load Navbar and Footer -->
+  <script>
+    const loadHTML = (id, file) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      fetch(file)
+        .then(res => res.text())
+        .then(html => el.innerHTML = html)
+        .catch(err => console.error(`Error loading ${file}:`, err));
+    };
+
+    loadHTML('navbar-placeholder', './navbar.html');
+    loadHTML('footer-placeholder', './footer.html');
+
+    // Mobile menu toggle
+    document.addEventListener('click', e => {
+      if (e.target.closest('#menu-btn')) {
+        const menu = document.querySelector('#menu');
+        if (menu) menu.classList.toggle('hidden');
+      }
+    });
+  </script>
 </body>
 
 </html>
