@@ -32,6 +32,21 @@ a:link {
   text-decoration: none;
 }
 
+/* wrapper hides overflow so slide appears from outside */
+.slide-wrapper {
+  overflow: hidden;
+}
+
+/* initial off-screen state */
+.slide-content {
+  transform: translateX(-120vw); /* fully off-screen left */
+  opacity: 0;
+  transition: transform 0.7s cubic-bezier(.22,.9,.36,1), opacity 0.5s ease;
+  will-change: transform, opacity;
+}
+
+/* visible state */
+
 .slide-content-active {
   opacity: 1 !important;
   transform: translateX(0) !important;
