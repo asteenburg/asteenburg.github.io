@@ -242,19 +242,19 @@ loadHTML('navbar-placeholder', './navbar.html', initHamburgerMenu);
 loadHTML('footer-placeholder', './footer.html');
   </script>
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const slideContent = document.querySelector("#quote-section .slide-content");
+document.addEventListener("DOMContentLoaded", () => {
+  const slide = document.querySelector("#quote-section .slide-content");
 
   const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
-      slideContent.classList.add("slide-content-active");
-      observer.disconnect(); // Only run once
+      slide.classList.add("slide-content-active");
+      observer.disconnect(); // run only once
     }
   }, { threshold: 0.2 });
 
-  observer.observe(slideContent);
+  observer.observe(slide);
 });
-  </script>
+</script>
 </body>
 
 </html>
