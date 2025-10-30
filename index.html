@@ -24,6 +24,9 @@
 
   <!-- Custom Stylesheet -->
   <link rel="Stylesheet" href="./stylesheets/stylesheet.css" />
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body class="text-slate-900 bg-white">
@@ -64,29 +67,29 @@
     <div class="flex flex-col gap-6 lg:grid lg:grid-cols-3">
 
       <!-- About Me -->
-      <div
-        class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4">
+      <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 p-4"
+        data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+        data-aos-mirror="true" data-aos-once="false">
+
         <h3 class="text-2xl font-bold border-b border-gray-300 text-gray-900 mb-2">
-          About Me</h3>
+          About Me
+        </h3>
         <p class="text-sm text-gray-900 leading-relaxed mb-2">
           Dedicated public safety professional with over 15 years of combined experience in law enforcement,
           emergency response, and regulatory compliance. Proven ability to enforce laws and regulations,
           resolve conflicts through de-escalation, and provide strong leadership in high-pressure situations.
-          Skilled in incident command, report writing, and community engagement, with a consistent record of
-          upholding integrity, accountability, and public trust.
         </p>
         <p class="text-sm text-gray-900 leading-relaxed">
           I’m a dedicated firefighter with a deep passion for serving my community and protecting what matters most.
           Off the front lines, I’ve developed a growing interest in web design — a creative outlet where I can build,
-          problem-solve, and keep learning. Whether I’m responding to emergencies or exploring new lines of code,
-          I bring the same drive, focus, and heart. Most of all, I’m a proud family person who believes in showing up
-          fully — both at home and on the job.
+          problem-solve, and keep learning.
         </p>
       </div>
 
       <!-- Experience -->
-      <div
-        class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4">
+      <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 p-4"
+        data-aos="fade-in" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+        data-aos-mirror="true" data-aos-once="false">
         <h3 class="text-2xl font-bold border-b border-gray-300 text-gray-900 mb-2">Experience</h3>
         <p class="text-sm text-gray-900 leading-relaxed mb-2">
           As a firefighter with 20 years of experience, I’ve gained extensive knowledge
@@ -102,8 +105,9 @@
       </div>
 
       <!-- Certifications -->
-      <div
-        class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4">
+      <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 p-4"
+        data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+        data-aos-mirror="true" data-aos-once="false">
         <h3 class="text-2xl font-bold border-b border-gray-300 text-gray-900 mb-2">Certifications</h3>
         <ul class="text-sm text-gray-900 leading-relaxed list-disc pl-5">
           <li>Firefighter 1001 Level II</li>
@@ -178,8 +182,9 @@
   <!-- Professional Experience Details -->
   <section class="px-4 sm:px-6 lg:px-16 py-8">
     <div class="flex m-2 py-6 justify-center">
-      <div
-        class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4">
+      <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
+        data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+        data-aos-mirror="true" data-aos-once="false">
         <h3 class="text-xl sm:text-2xl font-bold">Aircraft Rescue Firefighter</h3>
         <p class="text-sm text-gray-700 mb-3">Hamilton International Airport</p>
         <p class="text-sm text-gray-900 leading-relaxed">
@@ -189,8 +194,9 @@
       </div>
     </div>
     <div class="flex py-6 justify-start">
-      <div
-        class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4">
+      <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
+        data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+        data-aos-mirror="true" data-aos-once="false">
         <h3 class="text-xl sm:text-2xl font-bold">Aircraft Rescue Firefighter</h3>
         <p class="text-sm text-gray-700 mb-3">Region of Waterloo International Airport</p>
         <p class="text-sm text-gray-900 leading-relaxed">
@@ -200,8 +206,9 @@
       </div>
     </div>
     <div class="flex py-6 justify-center">
-      <div
-        class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4">
+      <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
+        data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+        data-aos-mirror="true" data-aos-once="false">
         <h3 class="text-xl sm:text-2xl font-bold">Firefighter & Instructor</h3>
         <p class="text-sm text-gray-700 mb-3">County of Brant Fire Department</p>
         <p class="text-sm text-gray-900 leading-relaxed">
@@ -257,6 +264,14 @@
       }
     });
   </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // animation speed
+      once: false // animate only once
+    });
+  </script>
+
 </body>
 
 </html>
