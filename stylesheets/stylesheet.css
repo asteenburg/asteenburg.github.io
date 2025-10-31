@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 .hero {
   /*background: url("../images/IMG_1953.jpg") no-repeat center center;*/
   background-size: cover;
