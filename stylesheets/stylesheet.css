@@ -35,6 +35,9 @@ a:link {
 /* wrapper hides overflow */
 .slide-wrapper {
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* initial off-screen state */
