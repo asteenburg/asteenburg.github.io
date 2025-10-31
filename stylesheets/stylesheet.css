@@ -46,7 +46,7 @@ a:link {
 
 /* initial off-screen state */
 .slide-content {
-  transform: translateX(-10%); /* fully off-screen left */
+  transform: translateX(-120%); /* fully off-screen left */
   opacity: 0;
   transition: transform 0.7s cubic-bezier(.22,.9,.36,1), opacity 0.5s ease;
   will-change: transform, opacity;
