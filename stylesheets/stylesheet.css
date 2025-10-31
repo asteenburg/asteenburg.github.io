@@ -51,3 +51,8 @@ a:link {
   opacity: 1;
 }
 
+@media (max-width: 640px) {
+  .your-card-class {
+    box-shadow: none;
+  }
+}
