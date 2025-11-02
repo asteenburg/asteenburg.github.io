@@ -38,6 +38,16 @@ a:link {
   text-decoration: none;
 }
 
+.experience-hero {
+  /*background: url("../images/Red3.jpg") no-repeat center center;*/
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
 /* wrapper hides overflow */
 .slide-wrapper {
   overflow: hidden;
