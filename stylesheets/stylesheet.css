@@ -41,6 +41,9 @@ a:link {
 .experience-hero {
   /*background: url("../images/Red3.jpg") no-repeat center center;*/
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -48,6 +51,7 @@ a:link {
   color: white;
   text-align: center;
 }
+
 /* wrapper hides overflow */
 .slide-wrapper {
   overflow: hidden;
@@ -58,9 +62,10 @@ a:link {
 
 /* initial off-screen state */
 .slide-content {
-  transform: translateX(-120%); /* fully off-screen left */
+  transform: translateX(-120%);
+  /* fully off-screen left */
   opacity: 0;
-  transition: transform 0.7s cubic-bezier(.22,.9,.36,1), opacity 0.5s ease;
+  transition: transform 0.7s cubic-bezier(.22, .9, .36, 1), opacity 0.5s ease;
   will-change: transform, opacity;
 }
 
