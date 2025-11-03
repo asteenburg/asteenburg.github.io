@@ -41,14 +41,9 @@ a:link {
 .professional-hero {
   /*background: url("../images/Red3.jpg") no-repeat center center;*/
 
-  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
   background-color: black;
-  height: 100vh;
-  width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   color: white;
@@ -78,20 +73,19 @@ a:link {
   opacity: 1;
 }
 
-@media (max-width: 640px) {
+/*@media (max-width: 640px) {
   .professional-hero {
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: black;
     height: 100vh;
-    width: 100%;
-    display: flex;
+    width: 100vw;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
 
   }
-}
+}*/
