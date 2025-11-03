@@ -75,7 +75,8 @@ a:link {
 
 @media (max-width: 640px) {
   .professional-hero {
-    background-size: cover;
+    background-size: contain;
+    /* or 'cover', depending on your preference */
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center;
