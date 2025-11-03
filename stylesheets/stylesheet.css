@@ -73,7 +73,7 @@ a:link {
   opacity: 1;
 }
 
-@@media (max-width: 640px) {
+@media (max-width: 640px) {
   .professional-hero {
     background-size: cover;
     background-attachment: scroll;
