@@ -73,19 +73,19 @@ a:link {
   opacity: 1;
 }
 
-@media (max-width: 640px) {
+@@media (max-width: 640px) {
   .professional-hero {
-    background-size: contain;
-    background-attachment: fixed;
+    background-size: cover;
+    background-attachment: scroll;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-color: black;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-
   }
 }
