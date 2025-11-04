@@ -38,9 +38,9 @@ a:link {
   text-decoration: none;
 }
 
-.professional-hero {
+/*.professional-hero {
   /*background: url("../images/Red3.jpg") no-repeat center center;*/
-
+/*
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: black;
@@ -48,7 +48,7 @@ a:link {
   justify-content: center;
   color: white;
   text-align: center;
-}
+}*/
 
 /* wrapper hides overflow */
 .slide-wrapper {
@@ -83,9 +83,7 @@ a:link {
     width: 60%;
     height: auto;
   }
-}
 
-@media (max-width: 640px) {
   .professional-hero {
     background-size: contain;
     /* or 'cover', depending on your preference */
