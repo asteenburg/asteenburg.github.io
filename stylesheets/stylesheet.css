@@ -74,7 +74,12 @@ a:link {
 }
 
 @media (max-width: 640px) {
-  .bio-image img {
+  .bio-image-fire img {
+    width: 60%;
+    height: auto;
+  }
+
+  .bio-image-mil img {
     width: 60%;
     height: auto;
   }
