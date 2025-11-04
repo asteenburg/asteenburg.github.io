@@ -74,6 +74,13 @@ a:link {
 }
 
 @media (max-width: 640px) {
+  .bio-image img {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
   .professional-hero {
     background-size: contain;
     /* or 'cover', depending on your preference */
