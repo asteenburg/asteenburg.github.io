@@ -1,25 +1,279 @@
-<nav class="absolute top-0 right-0 z-40 bg-transparent px-12 py-3 flex justify-between items-center">
-    <div class="text-xl font-bold"></div>
+<!DOCTYPE html>
+<html lang="en" id="top">
 
-    <!-- Hamburger button -->
-    <button id="menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-    </button>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Steenburg</title>
 
-    <!-- Desktop menu -->
-    <div class="hidden md:flex flex-row items-center space-x-6 text-white">
-        <a href="#" class="hover:text-blue-300">Home</a>
-        <a href="#about" class="hover:text-blue-300">About</a>
-        <a href="#contact" class="hover:text-blue-300">Contact</a>
-    </div>
-</nav>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Mobile menu -->
-<div id="menu" class="hidden flex-col items-start px-4 space-y-2 md:hidden bg-black bg-opacity-80 text-white pb-4">
-    <a href="#" class="hover:text-blue-300 px-8">Home</a>
-    <a href="#about" class="hover:text-blue-300 px-8">About</a>
-    <a href="#contact" class="hover:text-blue-300 px-8">Contact</a>
-</div>
+    <!-- Optional: Tailwind config for custom colors/fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./stylesheets/stylesheet.css">
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="text-slate-900 bg-white">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative  h-[100dvh] w-full bg-cover bg-center"
+        style="background-image: url('./images/IMG_2038.jpg')">
+
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex px-4">
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-left items-start pt-24">
+                <div class="hidden md:block md:col-span-1 overflow-hidden"></div>
+                <div
+                    class="col-span-12 md:col-span-10 flex flex-col md:items-start items-end md:justify-start space-y-4 md:text-left text-right">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase">
+                        Adam Steenburg
+                    </h1>
+                    <p class="text-lg sm:text-xl md:text-2xl uppercase">
+                        Firefighter, Aspiring Web Designer
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg max-w-2xl">
+                        I bring the same dedication to learning web design as I do to protecting my community. This site
+                        is
+                        my
+                        journey — combining hands-on service with hands-on skills.
+                    </p>
+                    <a href="#about"
+                        class="inline-block mt-4 px-6 py-3 md:bg-red-500 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition">
+                        Learn More
+                    </a>
+
+                </div>
+                <div class="hidden md:block md:col-span-1 overflow-hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <div id="about"></div>
+    <section class="w-full px-4 sm:px-6 lg:px-16 py-8">
+        <div class="flex flex-col gap-6 lg:grid lg:grid-cols-3">
+
+            <!-- About Me -->
+            <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 p-4"
+                data-aos="fade-right" data-aos-offset="300" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                data-aos-mirror="true" data-aos-once="false">
+
+                <h3 class="text-2xl font-bold border-b border-gray-300 text-gray-900 mb-2">
+                    About Me
+                </h3>
+                <p class="text-sm text-gray-900 leading-relaxed mb-2">
+                    Dedicated public safety professional with over 15 years of combined experience in law enforcement,
+                    emergency response, and regulatory compliance. Proven ability to enforce laws and regulations,
+                    resolve conflicts through de-escalation, and provide strong leadership in high-pressure situations.
+                </p>
+                <p class="text-sm text-gray-900 leading-relaxed">
+                    I’m a dedicated firefighter with a deep passion for serving my community and protecting what matters
+                    most.
+                    Off the front lines, I’ve developed a growing interest in web design — a creative outlet where I can
+                    build,
+                    problem-solve, and keep learning.
+                </p>
+            </div>
+
+            <!-- Experience -->
+            <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 p-4"
+                data-aos="fade-in" data-aos-offset="300" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                data-aos-mirror="true" data-aos-once="false">
+                <h3 class="text-2xl font-bold border-b border-gray-300 text-gray-900 mb-2">Experience</h3>
+                <p class="text-sm text-gray-900 leading-relaxed mb-2">
+                    As a firefighter with 20 years of experience, I’ve gained extensive knowledge
+                    and continuously worked to hone my craft. While I may not have as much experience in web design,
+                    I bring the same dedication and willingness to learn that has served me well in the fire service.
+                    I’ve completed a variety of courses to strengthen my programming skills, and I’m passionate about
+                    continuing to grow in this field.
+                </p>
+                <p class="text-sm text-gray-900 leading-relaxed">
+                    As a fire service instructor, I believe this commitment to lifelong learning is essential—not only
+                    for personal growth but also to effectively teach and inspire others.
+                </p>
+            </div>
+
+            <!-- Certifications -->
+            <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 p-4"
+                data-aos="fade-left" data-aos-offset="300" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                data-aos-mirror="true" data-aos-once="false">
+                <h3 class="text-2xl font-bold border-b border-gray-300 text-gray-900 mb-2">NFPA Certifications</h3>
+                <ul class="text-sm text-gray-900 list-disc leading-relaxed pl-2 space-y-1">
+                    <li>
+                        NFPA 1001 — Firefighter Level II
+                    </li>
+                    <li>
+                        NFPA 1072 / 472 — Hazardous Materials Operations
+                    </li>
+                    <li>
+                        NFPA 1021 — Fire Officer Level I
+                    </li>
+                    <li>
+                        NFPA 1041 — Fire Instructor Level II
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_1953.jpg')">
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-4">
+            <div class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-center md:text-left">
+                <div class="hidden md:block md:col-span-1"></div>
+                <div class="col-span-12 md:col-span-10 flex flex-col items-center md:items-start justify-center space-y-4"
+                    data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                    data-aos-mirror="true" data-aos-once="false">
+                    <p class="text-xl sm:text-2xl">“More often than not, a hero’s most epic battle is the one you never
+                        see;
+                        it’s
+                        the battle that goes on within him or herself.”</p>
+                    <p>– Kevin Smith, Actor.</p>
+                </div>
+                <div class="hidden md:block md:col-span-1"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- White Fade Divider -->
+    <section>
+        <div class="h-40 bg-gradient-to-b from-black/60 to-white"></div>
+    </section>
+
+    <!-- Header / Profile Title -->
+    <section class="professional-hero relative h-screen w-full bg-cover bg-center"
+        style="background-image: url('./images/Red3.jpg');" data-aos="fade-in" data-aos-offset="200"
+        data-aos-duration="800" data-aos-easing="ease-out-cubic">
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white text-center px-4 drop-shadow-lg">
+                Profes<span class="text-red-500">sional</span> Profile
+            </h2>
+        </div>
+    </section>
+
+    <!-- Professional Experience Details -->
+    <section class="px-4 sm:px-6 lg:px-16 py-8">
+        <div class="flex m-2 py-6 justify-center">
+            <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
+                data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                data-aos-mirror="true" data-aos-once="false">
+                <h3 class="text-xl sm:text-2xl font-bold">Aircraft Rescue Firefighter</h3>
+                <p class="text-sm text-gray-700 mb-3">Hamilton International Airport</p>
+                <p class="text-sm text-gray-900 leading-relaxed">
+                    Responsible for aircraft emergencies, medical response, and airfield safety.
+                    Strong focus on rapid intervention and teamwork in high pressure situations.
+                </p>
+            </div>
+        </div>
+        <div class="flex py-6 justify-start">
+            <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
+                data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                data-aos-mirror="true" data-aos-once="false">
+                <h3 class="text-xl sm:text-2xl font-bold">Aircraft Rescue Firefighter</h3>
+                <p class="text-sm text-gray-700 mb-3">Region of Waterloo International Airport</p>
+                <p class="text-sm text-gray-900 leading-relaxed">
+                    Responded to fire and medical incidents on both airside and landside.
+                    Supported operations including equipment inspections and emergency preparedness.
+                </p>
+            </div>
+        </div>
+        <div class="flex py-6 justify-center">
+            <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
+                data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                data-aos-mirror="true" data-aos-once="false">
+                <h3 class="text-xl sm:text-2xl font-bold">Firefighter & Instructor</h3>
+                <p class="text-sm text-gray-700 mb-3">County of Brant Fire Department</p>
+                <p class="text-sm text-gray-900 leading-relaxed">
+                    Provided structural fire response, public education, and team training.
+                    Mentored new recruits and contributed to improving firefighter readiness.
+                </p>
+            </div>
+        </div>
+        <div class="flex py-6 justify-start">
+            <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
+                data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+                data-aos-mirror="true" data-aos-once="false">
+                <h3 class="text-xl sm:text-2xl font-bold">Firefighter & Instructor</h3>
+                <p class="text-sm text-gray-700 mb-3">County of Brant Fire Department</p>
+                <p class="text-sm text-gray-900 leading-relaxed">
+                    Received 2012 Queen's Diamond Jubilee Medal
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative h-[70vh] w-full bg-cover bg-center"
+        style="background-image: url('./images/20230406_115808_Original.JPG')">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center">
+        </div>
+    </section>
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        console.log('Script loaded.');
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        if (menuBtn && menu) {
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+    <!-- JS to Load Navbar and Footer -->
+    <script>
+        const loadHTML = (id, file) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            fetch(file)
+                .then(res => res.text())
+                .then(html => el.innerHTML = html)
+                .catch(err => console.error(`Error loading ${file}:`, err));
+        };
+
+        loadHTML('navbar-placeholder', './navbar.html');
+        loadHTML('footer-placeholder', './footer.html');
+
+        // Mobile menu toggle
+        document.addEventListener('click', e => {
+            if (e.target.closest('#menu-btn')) {
+                const menu = document.querySelector('#menu');
+                if (menu) menu.classList.toggle('hidden');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // animation speed
+            once: false // animate only once
+        });
+    </script>
+
+</body>
+
+</html>
