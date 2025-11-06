@@ -9,19 +9,6 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Optional: Tailwind config for custom colors/fonts -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ["Inter", "sans-serif"],
-                    },
-                },
-            },
-        };
-    </script>
-
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
 
@@ -136,19 +123,28 @@
     </section>
 
     <!-- Quote Section -->
-    <section class="relative h-screen w-full bg-cover bg-center" style="background-image: url('./images/IMG_1953.jpg')">
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-4">
+    <section class="ken-burns-element relative h-screen w-full bg-cover bg-center"
+        style="background-image: url('./images/IMG_1953.jpg');">
+
+        <!-- Gradient + dark overlay for text readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="absolute inset-0 bg-opacity-60 flex items-center justify-center px-4">
+
             <div class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-center md:text-left">
                 <div class="hidden md:block md:col-span-1"></div>
-                <div class="col-span-12 md:col-span-10 flex flex-col items-center md:items-start justify-center space-y-4"
-                    data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
-                    data-aos-mirror="true" data-aos-once="false">
-                    <p class="text-xl sm:text-2xl">“More often than not, a hero’s most epic battle is the one you never
-                        see;
-                        it’s
-                        the battle that goes on within him or herself.”</p>
-                    <p>– Kevin Smith, Actor.</p>
+
+                <div class="col-span-12 md:col-span-10 flex flex-col items-center md:items-start justify-center space-y-6 p-6 "
+                    data-aos="fade-right" data-aos-offset="200" data-aos-duration="800"
+                    data-aos-easing="ease-out-cubic">
+
+                    <p class="text-xl italic font-light leading-snug drop-shadow-lg max-w-4xl">
+                        “More often than not, a hero’s most epic battle is the one you never see;
+                        it’s the battle that goes on within him or herself.”
+                    </p>
+
+                    <p class="text-xl text-red-400 font-bold tracking-wider">– Kevin Smith</p>
                 </div>
+
                 <div class="hidden md:block md:col-span-1"></div>
             </div>
         </div>
@@ -230,6 +226,19 @@
     <!-- footer -->
     <div id="footer-placeholder"></div>
 
+    <!-- Optional: Tailwind config for custom colors/fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
     <script>
         console.log('Script loaded.');
     </script>
@@ -267,6 +276,7 @@
             }
         });
     </script>
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
