@@ -29,8 +29,9 @@
             <div
                 class="grid grid-cols-1 md:grid-cols-12 w-full max-w-6xl mx-auto text-white text-left items-start pt-24">
                 <div class="hidden md:block md:col-span-1 overflow-hidden"></div>
-                <div
-                    class="col-span-12 md:col-span-10 flex flex-col md:items-start items-end md:justify-start space-y-4 md:text-left text-right">
+                <div class="col-span-12 md:col-span-10 flex flex-col md:items-start items-end md:justify-start space-y-4 md:text-left text-right"
+                    data-aos="fade-in" data-aos-offset="200" data-aos-duration="10000" data-aos-easing="ease-out-cubic"
+                    data-aos-mirror="true" data-aos-once="false">
                     <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase">
                         Adam Steenburg
                     </h1>
@@ -137,7 +138,7 @@
                     data-aos="fade-right" data-aos-offset="200" data-aos-duration="800"
                     data-aos-easing="ease-out-cubic">
 
-                    <p class="text-xl italic font-light leading-snug drop-shadow-lg max-w-4xl">
+                    <p class="text-2xl italic font-light leading-snug drop-shadow-lg max-w-4xl">
                         “More often than not, a hero’s most epic battle is the one you never see;
                         it’s the battle that goes on within him or herself.”
                     </p>
@@ -217,12 +218,18 @@
         </div>
     </section>
 
-    <section class="relative h-[70vh] w-full bg-cover bg-center"
-        style="background-image: url('./images/20230406_115808_Original.JPG')" data-aos="fade-in" data-aos-offset="200"
-        data-aos-duration="800" data-aos-easing="ease-out-cubic">
-        <div class="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center">
-        </div>
+    <section class="relative h-[70vh] w-full bg-cover bg-center" data-aos="fade-in" data-aos-offset="200"
+        data-aos-duration="2000" data-aos-delay="150" data-aos-easing="ease-out-quart"
+        style="background-image: url('./images/20230406_115808_Original.JPG')">
+        <div class="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center"></div>
     </section>
+
+    <script>
+        AOS.init({
+            once: false,
+            mirror: true,
+        });
+    </script>
     <!-- footer -->
     <div id="footer-placeholder"></div>
 
@@ -280,7 +287,7 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800, // animation speed
+            duration: 2000, // animation speed
             once: false // animate only once
         });
     </script>
