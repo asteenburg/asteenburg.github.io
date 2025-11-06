@@ -7,6 +7,53 @@ html {
   overflow-x: clip;
 }
 
+/*
+        1. Define the Ken Burns animation using 'transform: scale'.
+        This property is hardware-accelerated by the GPU, making the motion much smoother.
+        We also include 'will-change: transform' as a hint for the browser.
+        */
+@keyframes ken-burns {
+  0% {
+    transform: scale(1.0);
+  }
+
+  100% {
+    transform: scale(1.15);
+    /* Zoom in by 15% */
+  }
+}
+
+/*
+        2. Apply the animation to the dedicated background element.
+        - The element is absolutely positioned to fill the parent.
+        - It uses standard background properties (cover, center).
+        */
+.ken-burns-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* Essential background settings */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  /* Performance Hint */
+  will-change: transform;
+
+  /* Animation application */
+  animation: ken-burns 40s linear infinite alternate;
+}
+
+
+.bg-zoom {
+  /* Start the initial background size slightly larger to ensure it covers the screen even after the animation starts */
+  background-size: 100% 100%;
+  animation: slow-zoom 40s linear infinite alternate;
+}
+
 section {
   max-width: 100%;
   overflow-x: clip;
