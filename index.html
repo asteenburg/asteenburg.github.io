@@ -209,8 +209,8 @@
             <div class="rounded-lg shadow-xl shadow-gray-700/30 md:hover:shadow-xl md:hover:shadow-gray-900/50 transition p-4"
                 data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-out-cubic"
                 data-aos-mirror="true" data-aos-once="false">
-                <h3 class="text-xl sm:text-2xl font-bold">Canadian Forces</h3>
-                <p class="text-sm text-gray-700 mb-3"></p>
+                <h3 class="text-xl sm:text-2xl font-bold">Firefighter & Instructor</h3>
+                <p class="text-sm text-gray-700 mb-3">County of Brant Fire Department</p>
                 <p class="text-sm text-gray-900 leading-relaxed">
                     Received 2012 Queen's Diamond Jubilee Medal
                 </p>
@@ -223,6 +223,61 @@
         style="background-image: url('./images/20230406_115808_Original.JPG')">
         <div class="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center"></div>
     </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section text-black py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Heading -->
+            <h2 class="text-3xl uppercase font-bold border-b border-gray-300 text-left mb-8 pb-4">
+                Get In Touch
+            </h2>
+            <div class="relative inset-0 bg-black bg-opacity-70"></div>
+            <!-- Form + Map Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 rounded-lg shadow-lg p-6">
+                <!-- Contact Form -->
+                <form class="grid grid-cols-8 gap-4">
+                    <!-- First Name -->
+                    <label for="firstName" class="col-span-2 font-sans self-center text-right">First Name:</label>
+                    <input id="firstName" name="firstName" type="text"
+                        class="col-span-6 border border-gray-300 p-2 rounded-md" placeholder="Enter your first name" />
+
+                    <!-- Last Name -->
+                    <label for="lastName" class="col-span-2 font-sans self-center text-right">Last Name:</label>
+                    <input id="lastName" name="lastName" type="text"
+                        class="col-span-6 border border-gray-300 p-2 rounded-md" placeholder="Enter your last name" />
+
+                    <!-- Email -->
+                    <label for="emailAddress" class="col-span-2 font-sans self-center text-right">Email:</label>
+                    <input id="emailAddress" name="emailAddress" type="email"
+                        class="col-span-6 border border-gray-300 p-2 rounded-md"
+                        placeholder="Enter your email address" />
+
+                    <!-- Message -->
+                    <label for="message" class="col-span-2 font-sans self-start text-right mt-2">Message:</label>
+                    <textarea id="message" name="message" rows="4"
+                        class="col-span-6 border border-gray-300 p-2 rounded-md"
+                        placeholder="Enter your message"></textarea>
+
+                    <!-- Submit -->
+                    <div class="col-span-8 flex justify-end mt-4">
+                        <button type="submit"
+                            class="md:bg-red-500 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition py-2 px-6">
+                            Send
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Embedded Map -->
+                <div class="map-container w-full h-96 rounded-lg overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93150.20950317523!2d-80.35646662732985!3d43.147704233728454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c65e278ea730f%3A0x353da5a5a466f9e0!2sBrantford%2C%20ON!5e0!3m2!1sen!2sca!4v1762916208239!5m2!1sen!2sca"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script>
         AOS.init({
