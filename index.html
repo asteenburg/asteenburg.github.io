@@ -57,7 +57,7 @@
 
     <!-- about section -->
     <div id="about"></div>
-    <section class="w-full px-4 sm:px-6 lg:px-16 py-8">
+    <section class="w-full px-4 sm:px-6 lg:px-16 py-10">
         <div class="flex flex-col gap-6 lg:grid lg:grid-cols-3">
 
             <!-- About Me -->
@@ -124,7 +124,7 @@
     </section>
 
     <!-- Quote Section -->
-    <section class="ken-burns-element relative h-screen w-full bg-cover bg-center"
+    <section class="ken-burns-element relative h-screen w-fullr"
         style="background-image: url('./images/IMG_1953.jpg');">
 
         <!-- Gradient + dark overlay for text readability -->
@@ -226,13 +226,13 @@
     <div id="contact"></div>
 
     <!-- Contact Section -->
-    <section class="contact-section text-black py-12">
+    <section class="contact-section text-black py-12" data-aos="fade-in" data-aos-offset="200" data-aos-duration="2000"
+        data-aos-delay="150" data-aos-easing="ease-out-quart">
         <div class="max-w-6xl mx-auto px-4">
             <!-- Heading -->
             <h2 class="text-3xl uppercase font-bold border-b border-gray-300 text-left mb-8 pb-4">
                 Get In Touch
             </h2>
-            <div class="relative inset-0 bg-black bg-opacity-70"></div>
             <!-- Form + Map Container -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 rounded-lg shadow-lg p-6">
                 <!-- Contact Form -->
@@ -268,7 +268,8 @@
                     <!-- Submit -->
                     <div class="col-span-8 flex justify-end">
                         <button type="submit"
-                            class="md:bg-red-500 bg-red-500 text-white font-semibold text-sm rounded hover:bg-red-600 transition py-2 px-6">
+                            class="bg-red-500 text-white font-semibold text-sm rounded hover:bg-red-600 transition py-2 px-6"
+                            aria-label="Send message">
                             Send
                         </button>
                     </div>
@@ -279,19 +280,13 @@
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93150.20950317523!2d-80.35646662732985!3d43.147704233728454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c65e278ea730f%3A0x353da5a5a466f9e0!2sBrantford%2C%20ON!5e0!3m2!1sen!2sca!4v1762916208239!5m2!1sen!2sca"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade"
+                        aria-label="Map showing Brantford, Ontario"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <script>
-        AOS.init({
-            once: false,
-            mirror: true,
-        });
-    </script>
     <!-- footer -->
     <div id="footer-placeholder"></div>
 
@@ -349,10 +344,12 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 2000, // animation speed
-            once: false // animate only once
+            duration: 2000,
+            mirror: true,
+            once: false
         });
     </script>
+
 
 </body>
 
