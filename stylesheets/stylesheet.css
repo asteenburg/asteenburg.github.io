@@ -12,9 +12,10 @@ html {
         This property is hardware-accelerated by the GPU, making the motion much smoother.
         We also include 'will-change: transform' as a hint for the browser.
         */
+/* 1. Smooth zoom animation */
 @keyframes ken-burns {
   0% {
-    transform: scale(1.0);
+    transform: scale(1);
   }
 
   100% {
@@ -23,37 +24,43 @@ html {
   }
 }
 
-/*
-        2. Apply the animation to the dedicated background element.
-        - The element is absolutely positioned to fill the parent.
-        - It uses standard background properties (cover, center).
-        */
+/* 2. Main section container */
 .ken-burns-element {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  overflow: hidden;
+  /* keeps zoomed image inside section */
+  background: none;
+  /* we’ll use a pseudo-element for the background */
+}
 
-  /* Essential background settings */
+/* 3. Dedicated background layer */
+.ken-burns-element::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  /* Performance Hint */
+  transform-origin: center;
+  animation: ken-burns 40s ease-in-out infinite alternate;
   will-change: transform;
-
-  /* Animation application */
-  animation: ken-burns 40s linear infinite alternate;
+  z-index: 0;
 }
 
+/* 4. Make sure text/overlay content stays above background */
+.ken-burns-element>* {
+  position: relative;
+  z-index: 1;
+}
 
+/* 5. Optional: slow background zoom utility */
 .bg-zoom {
-  /* Start the initial background size slightly larger to ensure it covers the screen even after the animation starts */
   background-size: 100% 100%;
-  animation: slow-zoom 40s linear infinite alternate;
+  animation: slow-zoom 20s linear infinite alternate;
 }
 
+/* 6. Section behavior (no side bleed) */
 section {
   max-width: 100%;
   overflow-x: clip;
@@ -84,18 +91,6 @@ section {
 a:link {
   text-decoration: none;
 }
-
-/*.professional-hero {
-  /*background: url("../images/Red3.jpg") no-repeat center center;*/
-/*
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: black;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}*/
 
 /* wrapper hides overflow */
 .slide-wrapper {
