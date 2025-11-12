@@ -239,31 +239,37 @@
                 <!-- Contact Form -->
                 <form class="grid grid-cols-8 gap-4">
                     <!-- First Name -->
-                    <label for="firstName" class="col-span-2 font-sans self-center text-right">First Name:</label>
+                    <label for="firstName" class="col-span-2 font-sans self-center text-sm md:text-md text-right">First
+                        Name:</label>
                     <input id="firstName" name="firstName" type="text"
-                        class="col-span-6 border border-gray-300 p-2 rounded-md" placeholder="Enter your first name" />
+                        class="col-span-6 border border-gray-300 p-2 rounded-md text-sm md:text-md"
+                        placeholder="Enter your first name" />
 
                     <!-- Last Name -->
-                    <label for="lastName" class="col-span-2 font-sans self-center text-right">Last Name:</label>
-                    <input id="lastName" name="lastName" type="text"
-                        class="col-span-6 border border-gray-300 p-2 rounded-md" placeholder="Enter your last name" />
+                    <label for="lastName" class="col-span-2 font-sans self-center text-right text-sm md:text-md">Last
+                        Name:</label>
+                    <input id=" lastName" name="lastName" type="text"
+                        class="col-span-6 border border-gray-300 p-2 rounded-md text-sm md:text-md"
+                        placeholder="Enter your last name" />
 
                     <!-- Email -->
-                    <label for="emailAddress" class="col-span-2 font-sans self-center text-right">Email:</label>
-                    <input id="emailAddress" name="emailAddress" type="email"
-                        class="col-span-6 border border-gray-300 p-2 rounded-md"
-                        placeholder="Enter your email address" />
+                    <label for="emailAddress"
+                        class="col-span-2 font-sans self-center text-right text-sm md:text-md">Email:</label>
+                    <input id=" emailAddress" name="emailAddress" type="email"
+                        class="col-span-6 border border-gray-300 p-2 rounded-md text-sm md:text-md"
+                        placeholder=" Enter your email address" />
 
                     <!-- Message -->
-                    <label for="message" class="col-span-2 font-sans self-start text-right mt-2">Message:</label>
-                    <textarea id="message" name="message" rows="4"
-                        class="col-span-6 border border-gray-300 p-2 rounded-md"
-                        placeholder="Enter your message"></textarea>
+                    <label for="message"
+                        class="col-span-2 font-sans self-start text-right mt-2 text-sm md:text-md">Message:</label>
+                    <textarea id=" message" name="message" rows="4"
+                        class="col-span-6 border border-gray-300 p-2 rounded-md text-sm md:text-md""
+                        placeholder=" Enter your message"></textarea>
 
                     <!-- Submit -->
-                    <div class="col-span-8 flex justify-end mt-4">
+                    <div class="col-span-8 flex justify-end">
                         <button type="submit"
-                            class="md:bg-red-500 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition py-2 px-6">
+                            class="md:bg-red-500 bg-red-500 text-white font-semibold text-sm rounded hover:bg-red-600 transition py-2 px-6">
                             Send
                         </button>
                     </div>
